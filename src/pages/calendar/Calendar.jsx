@@ -7,6 +7,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import Stack from '@mui/material/Stack';
 import { useState } from 'react';
+import Paper from "@mui/material/Paper"
 
 
 function renderEventContent(eventInfo) {
@@ -30,6 +31,7 @@ function renderSidebarEvent(event) {
 
 function Calendar() {
 
+  // eslint-disable-next-line no-unused-vars
   const [weekendsVisible , setWeekendsVisible]=useState(true)
   const [currentEvents , setCurrentEvents]=useState([])
   let eventGuid = 0
@@ -51,11 +53,6 @@ function Calendar() {
     return String(eventGuid++)
   }
 
-  const handleWeekendsToggle = () => {
-    
-
-      setWeekendsVisible(!weekendsVisible)
-    }
   
    const handleDateSelect = (selectInfo) => {
       let title = prompt('Please enter a new title for your event')
@@ -92,32 +89,16 @@ function Calendar() {
   return (
     <Stack direction={"row"}>
 
-      <div className='demo-app-sidebar'>
-        <div className='demo-app-sidebar-section'>
-          <h2>Instructions</h2>
-          <ul>
-            <li>Select dates and you will be prompted to create a new event</li>
-            <li>Drag, drop, and resize events</li>
-            <li>Click an event to delete it</li>
-          </ul>
-        </div>
-        <div className='demo-app-sidebar-section'>
-          <label>
-            <input
-              type='checkbox'
-              checked={weekendsVisible}
-              onChange={handleWeekendsToggle}
-            ></input>
-            toggle weekends
-          </label>
-        </div>
-        <div className='demo-app-sidebar-section'>
-          <h2>All Events ({currentEvents.length})</h2>
+      <Paper className='demo-app-sidebar'>
+        
+        
+        
+          <h2 style={{textAlign:"center"}}>All Events ({currentEvents.length})</h2>
           <ul>
             {currentEvents.map(renderSidebarEvent)}
           </ul>
-        </div>
-      </div>
+        
+      </Paper>
 
        <div className='demo-app-main'>
                 <FullCalendar

@@ -6,10 +6,10 @@ body > div { /* the react root */
   height: 100%;
 }
 
-h2 {
+/* h2 {
   margin: 0;
   font-size: 16px;
-}
+} */
 
 ul {
   margin: 0;
