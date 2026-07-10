@@ -11,9 +11,9 @@ import Invoices from "./pages/invoices/Invoices.jsx";
 import Form from "./pages/form/Form.jsx";
 import Calendar from "./pages/calendar/Calendar.jsx";
 import Faq from "./pages/faq/Faq.jsx";
-import BarChart from "./pages/barChart/BarChart.jsx";
-import LineChart from "./pages/lineChart/LineChart.jsx";
-import PieChart from "./pages/pieChart/PieChart.jsx";
+import BarChartt from "./pages/barChart/BarChartt.jsx";
+import LineChartt from "./pages/lineChart/LineChartt.jsx";
+import PieChartt from "./pages/pieChart/PieChartt.jsx";
 import Geography from "./pages/geography/Geography.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -28,9 +28,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/form" element={<Form />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/bar" element={<BarChart />} />
-          <Route path="/line" element={<LineChart />} />
-          <Route path="/pie" element={<PieChart />} />
+          <Route path="/bar" element={<BarChartt />} />
+          <Route path="/line" element={<LineChartt />} />
+          <Route path="/pie" element={<PieChartt />} />
           <Route path="/geography" element={<Geography />} />
         </Route>
       </Routes>
